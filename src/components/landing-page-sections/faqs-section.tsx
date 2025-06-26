@@ -1,15 +1,8 @@
 import { HelpCircle } from "lucide-react";
-
-// Helper: Pasta Icon SVG
-const PastaIcon = ({ className }: { className?: string }) => (
-    <svg className={className} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M85.4167 29.1667C85.4167 29.1667 89.5833 41.6667 75 54.1667C60.4167 66.6667 41.6667 66.6667 33.3333 58.3333C25 50 25 37.5 37.5 29.1667C50 20.8333 62.5 20.8333 70.8333 29.1667" stroke="currentColor" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"/>
-      <path d="M70.8333 70.8333C70.8333 70.8333 66.6667 58.3333 81.25 45.8333C95.8333 33.3333 114.583 33.3333 122.917 41.6667C131.25 50 131.25 62.5 118.75 70.8333C106.25 79.1667 93.75 79.1667 85.4167 70.8333" stroke="currentColor" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" transform="translate(-40, 0)"/>
-    </svg>
-  );
+import Image from "next/image";
 
 const FAQItem = ({ question, answer }: { question: string; answer: string }) => (
-    <div className="bg-white/60 rounded-lg p-8 text-left max-w-2xl mx-auto mb-6">
+    <div className="bg-white rounded-lg p-8 text-left max-w-2xl mx-auto mb-6">
         <h3 className="text-xl font-semibold text-[#0A3A2A] mb-4">{question}</h3>
         <p className="text-gray-700 leading-relaxed">{answer}</p>
     </div>
@@ -34,11 +27,23 @@ export const FaqsSection = () => {
     return (
         <section className="bg-[#F8F5F0] py-24">
             <div className="container mx-auto px-6 relative">
-                <div className="absolute -top-10 left-1/4 text-[#0A3A2A]/5 -rotate-12">
-                    <PastaIcon className="w-32 h-32" />
+                <div className="absolute -top-10 left-1/4 opacity-20 -rotate-12">
+                    <Image 
+                        src="/images/motif/spices-leaf.png" 
+                        alt="Spices leaf" 
+                        width={128} 
+                        height={128} 
+                        className="w-32 h-32 object-contain"
+                    />
                 </div>
-                <div className="absolute -bottom-10 right-1/4 text-[#0A3A2A]/5 rotate-12">
-                    <PastaIcon className="w-32 h-32" />
+                <div className="absolute -bottom-10 right-1/4 opacity-20 rotate-12">
+                    <Image 
+                        src="/images/motif/leafy-spice.png" 
+                        alt="Leafy spice" 
+                        width={128} 
+                        height={128} 
+                        className="w-32 h-32 object-contain"
+                    />
                 </div>
                 
                 <div className="text-center mb-16">

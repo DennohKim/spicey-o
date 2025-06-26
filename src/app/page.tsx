@@ -8,7 +8,7 @@ import {
   ContactUsSection,
   ProductCarousel,
   FaqsSection,
-  WheatSection,
+  AboutSpiceyoSection,
   Footer,
 } from "@/components/landing-page-sections";
 
@@ -20,7 +20,7 @@ export default function HomePage() {
         <Header />
         <HeroSection />
         <FeatureSection />
-        <WheatSection />
+        {/* <AboutSpiceyoSection /> */}
         <ProductCarousel />
         <AppCtaSection />
         <FaqsSection />

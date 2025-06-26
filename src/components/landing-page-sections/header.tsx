@@ -36,15 +36,20 @@ export const Header = () => {
 
           {/* Right Nav */}
           <div className="flex items-center space-x-6">
-            {/* TODO: Replace with instagram &  whatsapp  */}
-            <button className="text-gray-800 hover:text-[#0A3A2A]">
+            <button 
+              className="text-gray-800 hover:text-[#0A3A2A] cursor-pointer"
+              onClick={() => window.open('https://www.instagram.com/_spiceyo/', '_blank')}
+            >
               <LucideInstagram className="h-5 w-5" />
             </button>
             {/* <button className="text-gray-800 hover:text-[#0A3A2A]">
               <LucideInstagram className="h-5 w-5" />
             </button> */}
 
-            <button className="relative text-gray-800 hover:text-[#0A3A2A]">
+            <button 
+              className="relative text-gray-800 hover:text-[#0A3A2A] cursor-pointer"
+              onClick={() => window.open('https://api.whatsapp.com/send/?phone=%2B254717996898&text&type=phone_number&app_absent=0', '_blank')}
+            >
               <ShoppingCart className="h-5 w-5" />
             </button>
           </div>

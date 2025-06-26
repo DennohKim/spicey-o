@@ -1,31 +1,55 @@
+import React from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import SpiceyO from "/public/images/all_products.jpg";
+import LowHeat from "/public/images/low.jpg";
+import HotHeat from "/public/images/hot_heat.jpg";
+import MediumHeat from "/public/images/medium.jpg";
+import VeryHotHeat from "/public/images/very_hot.jpg";
+import PickledOnions from "/public/images/pickled_onions.jpg";
+import PickledBeets from "/public/images/pickled_beets.jpg";
 
-export const ProductCarousel = () => {
+export const ProductCarousel: React.FC = () => {
   const products = [
     {
       name: "Tomato & Chilli Chutney - Low",
-      img: "https://placehold.co/300x400/e4a400/fff?text=Spaghetti",
+      img: LowHeat,
       description: "Signature base with garlic and ginger. Mildly spicy.",
+      price: "Ksh 350",
     },
     {
       name: "Tomato & Chilli Chutney - Medium",
-      img: "https://placehold.co/300x400/0A3A2A/fff?text=Cavatelli",
+      img: MediumHeat,
       description: "A balanced kick for those who like it warm.",
+      price: "Ksh 350",
     },
     {
       name: "Tomato & Chilli Chutney - Hot",
-      img: "https://placehold.co/300x400/e4a400/fff?text=Rigatoni",
+      img: HotHeat,
       description: "Seriously spicy for the heat seekers.",
+      price: "Ksh 350",
     },
     {
       name: "Tomato & Chilli Chutney - Very Freakin Hot",
-      img: "https://placehold.co/300x400/0A3A2A/fff?text=Fusilli",
+      img: VeryHotHeat,
       description: "For the full-blown chili fiends. Extreme heat!",
+      price: "Ksh 350",
+    },
+    {
+      name: "Pickled Onions",
+      img: PickledOnions,
+      description: "Sharp Bite. Big Flavour. Punguza Boredom.",
+      price: "Ksh 350",
+    },
+    {
+      name: "Pickled Beets",
+      img: PickledBeets,
+      description: "Crimson Crunch. Tangy Love. Farm-to-Fire.",
+      price: "Ksh 350",
     },
   ];
   return (
-    <section className="bg-[#F8F5F0] py-24">
+    <section className="bg-[#F8F5F0] py-12">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl sm:text-5xl font-serif text-[#0A3A2A]">
           Spicey O products
@@ -42,9 +66,12 @@ export const ProductCarousel = () => {
                   height={400}
                 />
               </div>
-              <h3 className="mt-4 text-lg font-bold text-gray-800 tracking-widest">
+              <h3 className="mt-4 text-lg font-medium text-gray-800 tracking-widest text-left">
                 {product.name}
               </h3>
+              <p className="mt-2 text-xl font-bold text-gray-900 text-left">
+                {product.price}
+              </p>
             </div>
           ))}
         </div>
@@ -55,7 +82,8 @@ export const ProductCarousel = () => {
         <div className="mt-12">
           <Button
             size="lg"
-            className="bg-[#0A3A2A] text-white hover:bg-[#0A3A2A]/90 font-bold rounded-full px-10 py-6 text-base"
+            className="bg-[#0A3A2A] text-white hover:bg-[#0A3A2A]/90 font-bold rounded-full px-10 py-6 text-base cursor-pointer"
+            onClick={() => window.open('https://api.whatsapp.com/send/?phone=%2B254717996898&text&type=phone_number&app_absent=0', '_blank')}
           >
             SHOP NOW
           </Button>

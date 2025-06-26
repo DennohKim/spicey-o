@@ -1,12 +1,13 @@
 import Image from "next/image";
+import SpiceyO from "/public/images/all_products.jpg";
 
-export const WheatSection = () => {
+export const AboutSpiceyoSection = () => {
   return (
     <section className="bg-[#F8F5F0] pb-24">
       <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         <div>
           <Image
-            src="https://placehold.co/600x800/e0e0e0/333?text=Raw+Pasta+Varieties"
+            src={SpiceyO}
             alt="Various types of uncooked pasta"
             className="rounded-2xl object-cover w-full h-full"
             width={600}

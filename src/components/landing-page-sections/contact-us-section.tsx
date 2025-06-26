@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 export const ContactUsSection = () => {
     return (
         <section className="bg-white py-24">
-            <div className="container mx-auto px-6 text-center">
+            <div className=" px-6 text-center">
                 <h2 className="text-5xl  text-[#0A3A2A] font-serif mb-8">Get in Touch</h2>
                 
                 <p className="text-gray-600 text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
@@ -15,7 +15,7 @@ export const ContactUsSection = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
                     <Button 
                         className="bg-[#E6B17A] hover:bg-[#D4A068] text-white px-8 py-3 rounded-lg text-lg font-medium"
-                        onClick={() => window.open('https://wa.me/', '_blank')}
+                        onClick={() => window.open('https://api.whatsapp.com/send/?phone=%2B254717996898&text&type=phone_number&app_absent=0', '_blank')}
                     >
                         <MessageCircle className="mr-2 h-5 w-5" />
                         WhatsApp Us
@@ -34,8 +34,8 @@ export const ContactUsSection = () => {
                 <div className="text-center">
                     <p className="text-gray-600 mb-4">Follow us on Social Media:</p>
                     <button 
-                        className="inline-flex items-center justify-center w-12 h-12 bg-[#E6B17A] hover:bg-[#D4A068] rounded-full transition-colors"
-                        onClick={() => window.open('https://instagram.com/', '_blank')}
+                        className="inline-flex items-center justify-center w-12 h-12 bg-[#E6B17A] hover:bg-[#D4A068] rounded-full transition-colors cursor-pointer"
+                        onClick={() => window.open('https://www.instagram.com/_spiceyo/', '_blank')}
                     >
                         <Instagram className="h-6 w-6 text-white" />
                     </button>
