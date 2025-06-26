@@ -1,4 +1,4 @@
-import { Truck, Wallet, ShoppingBag, Lightbulb } from "lucide-react";
+import { Truck, Wallet, ShoppingBag } from "lucide-react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import SpiceyO from "/public/images/all_products.jpg";

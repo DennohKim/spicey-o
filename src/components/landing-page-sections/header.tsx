@@ -1,11 +1,10 @@
 import { LucideInstagram, ShoppingCart } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import SpiceyO from "/public/spicey-o.png";
 
 export const Header = () => {
   return (
-    <header className="bg-[#F8F5F0] py-4">
+    <header className="bg-[#F8F5F0] pb-4">
       <div className="container mx-auto px-6">
         <div className="relative flex items-center justify-between h-16">
           {/* Left Nav */}

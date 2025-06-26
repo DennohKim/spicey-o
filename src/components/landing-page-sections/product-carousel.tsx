@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
-import SpiceyO from "/public/images/all_products.jpg";
 import LowHeat from "/public/images/low.jpg";
 import HotHeat from "/public/images/hot_heat.jpg";
 import MediumHeat from "/public/images/medium.jpg";

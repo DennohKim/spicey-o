@@ -1,6 +1,5 @@
 import { Button } from "../ui/button";
 import Image from "next/image";
-import SpiceyO from "/public/images/all_products.jpg";
 import heroImage1 from "/public/images/motif/hero_image1.jpg";
 import heroImage2 from "/public/images/motif/hero_images.jpg";
 
@@ -8,7 +7,7 @@ import heroImage2 from "/public/images/motif/hero_images.jpg";
 export const HeroSection = () => {
   return (
     <>
-      <section className="bg-[#0A3A2A] pt-20 pb-20 overflow-hidden relative rounded-[3rem]">
+      <section className="bg-[#0A3A2A] p-20 overflow-hidden relative rounded-[3rem]">
         <div className="absolute top-20 left-10 opacity-30">
           <Image 
             src="/images/motif/chilli.png" 

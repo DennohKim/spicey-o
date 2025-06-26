@@ -8,7 +8,7 @@ import {
   ContactUsSection,
   ProductCarousel,
   FaqsSection,
-  AboutSpiceyoSection,
+  // AboutSpiceyoSection,
   Footer,
 } from "@/components/landing-page-sections";
 
