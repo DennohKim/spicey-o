@@ -66,12 +66,12 @@ export const ProductCarousel: React.FC = () => {
                   height={400}
                 />
               </div>
-              <h3 className="mt-4 text-lg font-medium text-gray-800 tracking-widest text-left">
+              <h3 className="mt-4 text-lg font-semibold text-gray-800 tracking-widest text-left">
                 {product.name}
               </h3>
-              <p className="mt-2 text-xl font-bold text-gray-900 text-left">
+              {/* <p className="mt-2 text-xl font-bold text-gray-900 text-left">
                 {product.price}
-              </p>
+              </p> */}
             </div>
           ))}
         </div>
