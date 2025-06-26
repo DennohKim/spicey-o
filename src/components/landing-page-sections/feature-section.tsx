@@ -18,7 +18,7 @@ export const FeatureSection = () => {
   };
 
   return (
-    <section className="bg-[#F8F5F0] py-24">
+    <section id="features" className="bg-[#F8F5F0] py-24">
       <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         <div className="text-[#0A3A2A]">
           <h2 className="text-5xl font-serif">

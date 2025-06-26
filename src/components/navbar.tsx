@@ -6,8 +6,8 @@ import { Menu, X, ShoppingCart } from "lucide-react";
 import { Button } from "./ui/button";
 
 const navLinks = [
-  { label: "Our story", href: "#" },
-  { label: "Discover", href: "#" },
+  { label: "Our story", href: "#features" },
+  { label: "Products", href: "#products" },
 ];
 
 export default function Navbar() {
@@ -20,13 +20,13 @@ export default function Navbar() {
           {/* Left: Nav Links */}
           <div className="hidden md:flex gap-8 items-center">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.label}
                 href={link.href}
-                className="text-lg font-medium text-gray-900 hover:text-orange-700 transition-colors"
+                className="text-lg font-medium text-gray-900 hover:text-orange-700 transition-colors cursor-pointer"
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
           </div>
 
@@ -67,14 +67,14 @@ export default function Navbar() {
         <div className="md:hidden bg-[#fcf6ec] border-t border-[#f5e9d7] px-4 pb-4">
           <div className="flex flex-col gap-4 mt-4">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.label}
                 href={link.href}
-                className="text-lg font-medium text-gray-900 hover:text-orange-700 transition-colors"
+                className="text-lg font-medium text-gray-900 hover:text-orange-700 transition-colors cursor-pointer"
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
             <Button size="sm" className="text-base font-medium px-2 w-fit">
               Shop

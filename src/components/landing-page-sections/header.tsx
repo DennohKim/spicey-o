@@ -10,18 +10,18 @@ export const Header = () => {
         <div className="relative flex items-center justify-between h-16">
           {/* Left Nav */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link
-              href="#"
-              className="text-sm font-medium text-gray-700 hover:text-[#0A3A2A]"
+            <a
+              href="#features"
+              className="text-sm font-medium text-gray-700 hover:text-[#0A3A2A] cursor-pointer"
             >
               Our Story
-            </Link>
-            <Link
-              href="#"
-              className="text-sm font-medium text-gray-700 hover:text-[#0A3A2A]"
+            </a>
+            <a
+              href="#products"
+              className="text-sm font-medium text-gray-700 hover:text-[#0A3A2A] cursor-pointer"
             >
               Products
-            </Link>
+            </a>
           </div>
 
           {/* Centered Logo */}

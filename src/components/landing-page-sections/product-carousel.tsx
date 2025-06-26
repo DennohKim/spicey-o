@@ -49,7 +49,7 @@ export const ProductCarousel: React.FC = () => {
     },
   ];
   return (
-    <section className="bg-[#F8F5F0] py-12">
+    <section id="products" className="bg-[#F8F5F0] py-12">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl sm:text-5xl font-serif text-[#0A3A2A]">
           Spicey O products
