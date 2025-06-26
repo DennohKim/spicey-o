@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import { motion, useInView } from "motion/react";
 import LowHeat from "/public/images/low.jpg";
 import HotHeat from "/public/images/hot_heat.jpg";
 import MediumHeat from "/public/images/medium.jpg";
@@ -9,6 +10,9 @@ import PickledOnions from "/public/images/pickled_onions.jpg";
 import PickledBeets from "/public/images/pickled_beets.jpg";
 
 export const ProductCarousel: React.FC = () => {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
+
   const products = [
     {
       name: "Tomato & Chilli Chutney - Low",
@@ -47,46 +51,115 @@ export const ProductCarousel: React.FC = () => {
       price: "Ksh 350",
     },
   ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { 
+        duration: 0.6
+      }
+    }
+  };
+
   return (
-    <section id="products" className="bg-[#F8F5F0] py-12">
+    <section id="products" className="bg-[#F8F5F0] py-12" ref={sectionRef}>
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-3xl sm:text-5xl font-serif text-[#0A3A2A]">
+        <motion.h2 
+          className="text-3xl sm:text-5xl font-serif text-[#0A3A2A]"
+          initial={{ opacity: 0, y: -30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -30 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
           Spicey O products
-        </h2>
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pb-4">
-          {products.map((product) => (
-            <div key={product.name} className="group">
-              <div className="overflow-hidden rounded-xl">
-                <Image
-                  src={product.img}
-                  alt={product.name}
-                  className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
-                  width={300}
-                  height={400}
-                />
-              </div>
-              <h3 className="mt-4 text-lg font-semibold text-gray-800 tracking-widest text-left">
+        </motion.h2>
+        
+        <motion.div 
+          className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pb-4"
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
+          {products.map((product, index) => (
+            <motion.div 
+              key={product.name} 
+              className="group"
+              variants={itemVariants}
+              whileHover={{ y: -10 }}
+              transition={{ duration: 0.3 }}
+            >
+              <motion.div 
+                className="overflow-hidden rounded-xl"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                >
+                  <Image
+                    src={product.img}
+                    alt={product.name}
+                    className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                    width={300}
+                    height={400}
+                  />
+                </motion.div>
+              </motion.div>
+              <motion.h3 
+                className="mt-4 text-lg font-semibold text-gray-800 tracking-widest text-left"
+                initial={{ opacity: 0 }}
+                animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 + 0.5 }}
+              >
                 {product.name}
-              </h3>
-              {/* <p className="mt-2 text-xl font-bold text-gray-900 text-left">
-                {product.price}
-              </p> */}
-            </div>
+              </motion.h3>
+            </motion.div>
           ))}
-        </div>
-        <div className="mt-4 text-gray-600 leading-relaxed">
+        </motion.div>
+        
+        <motion.div 
+          className="mt-4 text-gray-600 leading-relaxed"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
           We&apos;re also developing a line of dipping sauces and trialling new
           seasonal condiments. Stay tuned!
-        </div>
-        <div className="mt-12">
-          <Button
-            size="lg"
-            className="bg-[#0A3A2A] text-white hover:bg-[#0A3A2A]/90 font-bold rounded-full px-10 py-6 text-base cursor-pointer"
-            onClick={() => window.open('https://api.whatsapp.com/send/?phone=%2B254717996898&text&type=phone_number&app_absent=0', '_blank')}
+        </motion.div>
+        
+        <motion.div 
+          className="mt-12"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+          transition={{ duration: 0.6, delay: 1 }}
+        >
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            SHOP NOW
-          </Button>
-        </div>
+            <Button
+              size="lg"
+              className="bg-[#0A3A2A] text-white hover:bg-[#0A3A2A]/90 font-bold rounded-full px-10 py-6 text-base cursor-pointer"
+              onClick={() => window.open('https://api.whatsapp.com/send/?phone=%2B254717996898&text&type=phone_number&app_absent=0', '_blank')}
+            >
+              SHOP NOW
+            </Button>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
