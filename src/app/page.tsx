@@ -1,7 +1,7 @@
 
 
 "use client"
-import React, { useState } from 'react';
+import React from 'react';
 import { AppCtaSection, FeatureSection, Header, HeroSection, ContactUsSection, ProductCarousel, FaqsSection, WheatSection, Footer } from '@/components/landing-page-sections';
 
 

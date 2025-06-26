@@ -1,12 +1,16 @@
+import Image from "next/image";
+
 export const WheatSection = () => {
   return (
     <section className="bg-[#F8F5F0] pb-24">
       <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         <div>
-          <img
+          <Image
             src="https://placehold.co/600x800/e0e0e0/333?text=Raw+Pasta+Varieties"
             alt="Various types of uncooked pasta"
             className="rounded-2xl object-cover w-full h-full"
+            width={600}
+            height={800}
           />
         </div>
         <div className="bg-white p-12 rounded-2xl shadow-lg">

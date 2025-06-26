@@ -9,7 +9,7 @@ export const ContactUsSection = () => {
                 
                 <p className="text-gray-600 text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
                     Got questions? Want to place an order, collaborate, or make a trade enquiry? 
-                    We'd love to hear from you!
+                    We&apos;d love to hear from you!
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">

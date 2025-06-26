@@ -1,5 +1,6 @@
-import { Search, ShoppingCart, User, Play, ArrowRight, Smartphone, MapPin, Apple, Star } from 'lucide-react';
+import { Play, ArrowRight } from 'lucide-react';
 import { Card } from '../ui/card';
+import Image from 'next/image';
 
 
 export const FeatureSection = () => {
@@ -20,7 +21,7 @@ export const FeatureSection = () => {
                 <div className="flex flex-col items-center">
                     <Card className="bg-white p-4 rounded-2xl shadow-xl w-full max-w-md">
                         <div className="relative">
-                            <img src="https://placehold.co/600x600/e2e8f0/333?text=Exquisite+Pasta" alt="Pasta dish" className="rounded-xl w-full h-auto" />
+                            <Image src="https://placehold.co/600x600/e2e8f0/333?text=Exquisite+Pasta" alt="Pasta dish" className="rounded-xl w-full h-auto" width={600} height={600} />
                             <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/80 backdrop-blur-sm rounded-full p-4 hover:bg-white transition-transform hover:scale-105">
                                 <Play className="h-8 w-8 text-[#0A3A2A] fill-[#0A3A2A]" />
                             </button>

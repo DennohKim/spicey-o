@@ -1,5 +1,5 @@
 import { Button } from "../ui/button";
-import { Header } from "./header";
+import Image from "next/image";
 
 // Helper: Pasta Icon SVG
 const PastaIcon = ({ className }: { className: string }) => (
@@ -44,7 +44,7 @@ export const HeroSection = () => {
         <div className="container mx-auto px-6 flex items-center justify-center relative">
           {/* Left Image */}
           <div className="hidden lg:block absolute left-0 -translate-x-1/3 top-1/2 -translate-y-1/2">
-            <img
+            <Image
               src="https://placehold.co/400x400/F8F5F0/333?text=Pasta+Bowl"
               alt="Bowl of pasta"
               className="rounded-full w-80 h-80 object-cover border-8 border-[#F8F5F0]"
@@ -71,10 +71,12 @@ export const HeroSection = () => {
 
           {/* Right Image */}
           <div className="hidden lg:block absolute right-0 translate-x-1/3 top-1/2 -translate-y-1/2">
-            <img
+            <Image
               src="https://placehold.co/400x400/F8F5F0/333?text=Fresh+Pasta"
               alt="Another bowl of pasta"
               className="rounded-full w-96 h-96 object-cover border-8 border-[#F8F5F0]"
+              width={400}
+              height={400}
             />
           </div>
         </div>

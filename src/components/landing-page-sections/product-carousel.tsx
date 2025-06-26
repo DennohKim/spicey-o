@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "../ui/button";
 
 export const ProductCarousel = () => {
@@ -5,26 +6,22 @@ export const ProductCarousel = () => {
     {
       name: "Tomato & Chilli Chutney - Low",
       img: "https://placehold.co/300x400/e4a400/fff?text=Spaghetti",
-      description:
-        "Signature base with garlic and ginger. Mildly spicy.",
+      description: "Signature base with garlic and ginger. Mildly spicy.",
     },
     {
       name: "Tomato & Chilli Chutney - Medium",
       img: "https://placehold.co/300x400/0A3A2A/fff?text=Cavatelli",
-      description:
-        "A balanced kick for those who like it warm.",
+      description: "A balanced kick for those who like it warm.",
     },
     {
       name: "Tomato & Chilli Chutney - Hot",
       img: "https://placehold.co/300x400/e4a400/fff?text=Rigatoni",
-      description:
-        "Seriously spicy for the heat seekers.",
+      description: "Seriously spicy for the heat seekers.",
     },
     {
       name: "Tomato & Chilli Chutney - Very Freakin Hot",
       img: "https://placehold.co/300x400/0A3A2A/fff?text=Fusilli",
-      description:
-        "For the full-blown chili fiends. Extreme heat!",
+      description: "For the full-blown chili fiends. Extreme heat!",
     },
   ];
   return (
@@ -37,10 +34,12 @@ export const ProductCarousel = () => {
           {products.map((product) => (
             <div key={product.name} className="group">
               <div className="overflow-hidden rounded-xl">
-                <img
+                <Image
                   src={product.img}
                   alt={product.name}
                   className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-105"
+                  width={300}
+                  height={400}
                 />
               </div>
               <h3 className="mt-4 text-lg font-bold text-gray-800 tracking-widest">
@@ -50,7 +49,7 @@ export const ProductCarousel = () => {
           ))}
         </div>
         <div className="mt-4 text-gray-600 leading-relaxed">
-          We're also developing a line of dipping sauces and trialling new
+          We&apos;re also developing a line of dipping sauces and trialling new
           seasonal condiments. Stay tuned!
         </div>
         <div className="mt-12">

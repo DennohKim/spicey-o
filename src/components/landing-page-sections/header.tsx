@@ -1,4 +1,4 @@
-import { LucideInstagram, Search, ShoppingCart } from "lucide-react";
+import { LucideInstagram, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import SpiceyO from "/public/spicey-o.png";

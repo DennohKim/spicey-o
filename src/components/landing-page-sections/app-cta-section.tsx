@@ -1,5 +1,6 @@
 import { Truck, Wallet, ShoppingBag, Lightbulb } from "lucide-react"
 import { Button } from "../ui/button"
+import Image from "next/image"
 
 export const AppCtaSection = () => {
     return (
@@ -11,7 +12,7 @@ export const AppCtaSection = () => {
                             Find Spicey-O Near You
                         </h2>
                         <p className="max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                            We're keeping it simple and personal for now. Browse our range and
+                            We&apos;re keeping it simple and personal for now. Browse our range and
                             place your order directly via WhatsApp.
                         </p>
                         <a
@@ -53,7 +54,7 @@ export const AppCtaSection = () => {
                             <Lightbulb className="h-6 w-6 text-orange-400" />
                         </div>
                         <div className="flex flex-col items-center gap-4 text-center">
-                            <img
+                            <Image
                                 alt="Image"
                                 className="mx-auto aspect-[1/2] overflow-hidden rounded-lg border-4 border-gray-800 object-cover object-center"
                                 height="500"
