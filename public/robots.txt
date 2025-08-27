@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Allow: /
+
+# BadBot
+User-agent: BadBot
+Disallow: /
+
+# Host
+Host: https://spiceyo.food
+
+# Sitemaps
+Sitemap: https://spiceyo.food/sitemap.xml
